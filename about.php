@@ -16,6 +16,36 @@
         </div>
     </header>
     <main>
+        <div>
+            <p>Testo Inserito:</p>
+            <p>
+                <?php 
+                    echo $_GET['paragraph']; 
+                ?>
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p>Lunghezza Testo Inserito:</p>
+            <p>
+                <?php
+                    echo strlen($_GET['paragraph']);
+                ?>
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p>Paragrafo con testo censurato:</p>
+            <p>
+                <?php 
+                    $censoredPar = str_replace($_GET['badWord'], '***', $_GET['paragraph']);
+                    echo $censoredPar;
+                ?>
+            </p>
+        </div>
+        <hr>
+
+        <hr>
         <div class="container">
             <a href="./index.php">Torna alla home</a>
         </div>

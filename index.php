@@ -1,5 +1,6 @@
 <?php
-
+    $paragraph = '';
+    $baWord = '';
 ?>
 
 <!DOCTYPE html>
@@ -21,15 +22,41 @@
     </header>
     <main>
         <div class="container">
-            <form action="./about.php">
+            <form action="./about.php" method="GET">
                 <div>
-                    <input
-                    type="text"
-                    placeholder="nome">
+                    <div>                        
+                        <label for="badWord">
+                            testo:
+                        </label>
+                    </div>
+                    <div>                        
+                        <input
+                        id="paragraph"
+                        name="paragraph"
+                        type="text"
+                        placeholder="inserisci testo..."
+                        value="<?php echo $paragraph; ?>">
+                    </div>
                 </div>
                 <div>
-                    <button
-                    type="submit">Invia</button>
+                    <div>                        
+                        <label for="badWord">
+                            Parola da censurare:
+                        </label>
+                    </div>
+                    <div>                        
+                        <input
+                        id="badWord"
+                        name="badWord"
+                        type="text"
+                        placeholder="parola da censurare"
+                        value="<?php echo $badWord; ?>">
+                    </div>
+                </div>
+                <div>
+                    <button type="submit">
+                        Invia
+                    </button>
                 </div>
             </form>
         </div>
